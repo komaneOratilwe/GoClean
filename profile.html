@@ -1,0 +1,226 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - GoClean</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <style>
+    /* Profile-specific layout & enhancements matching theme */
+    .profile-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .profile-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .profile-header-banner {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      height: 120px;
+      position: relative;
+    }
+
+    .profile-avatar-wrapper {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin: -55px auto 15px;
+    }
+
+    .profile-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      object-fit: cover;
+      background-color: #f0f4f8;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .profile-body {
+      padding: 0 30px 30px;
+      text-align: center;
+    }
+
+    .profile-body h2 {
+      margin: 5px 0;
+      color: #333333;
+      font-size: 1.5rem;
+    }
+
+    .profile-body p.role {
+      color: #6c757d;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      text-align: left;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #495057;
+      font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 12px;
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    .form-group input[readonly] {
+      background-color: #e9ecef;
+      cursor: not-allowed;
+    }
+
+    .action-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+    }
+
+    .btn-save {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-save:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-cancel {
+      background-color: #6c757d;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-cancel:hover {
+      background-color: #5a6268;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="dashboard.html">
+        <img src="images/logo.png" alt="GoClean Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="profile.html" class="active">Profile</a></li>
+        <li><a href="login.html" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Profile Section -->
+  <main class="profile-container">
+    <div class="profile-card">
+      <div class="profile-header-banner"></div>
+      
+      <div class="profile-body">
+        <div class="profile-avatar-wrapper">
+          <img src="images/washing-machine.3.png" alt="User Avatar" class="profile-avatar" id="avatarPreview">
+        </div>
+        
+        <h2 id="displayName">John Doe</h2>
+        <p class="role">Valued Customer</p>
+
+        <form id="profileForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" value="John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" value="johndoe@example.com" readonly>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" value="+1 (555) 019-2834" required>
+            </div>
+
+            <div class="form-group">
+              <label for="pickupAddress">Default Pickup Address</label>
+              <input type="text" id="pickupAddress" name="pickupAddress" value="123 Main Street, Apt 4B" required>
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="instructions">Special Delivery Instructions</label>
+              <textarea id="instructions" name="instructions" rows="3" placeholder="e.g., Leave package at front door, ring bell..."></textarea>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <a href="dashboard.html" class="btn-cancel">Cancel</a>
+            <button type="submit" class="btn-save">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Handle Profile Update UI interactions
+    document.getElementById('profileForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const updatedName = document.getElementById('fullName').value;
+      document.getElementById('displayName').textContent = updatedName;
+      
+      alert('Profile updated successfully!');
+    });
+  </script>
+</body>
+</html>
