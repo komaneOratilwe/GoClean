@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Track Order | GoClean</title>
+
+    <link rel="stylesheet" href="css/track-order.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <a href="dashboard.html" class="logo">
+            <span>go<span class="logo-accent">clean</span></span>
+            <span class="logo-badge">LAUNDRY</span>
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">Home</a>
+
+            <a href="order.html">New Orders</a>
+
+            <a href="my-orders.html">My Orders</a>
+
+            <a href="track-order.html" class="active">Track Order</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="about-us.html">About Us</a>
+
+            <a href="profile.html">Profile</a>
+
+        </nav>
+
+        <div class="header-icons">
+
+            <button class="icon-btn" aria-label="Notifications">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notif-dot"></span>
+            </button>
+
+            <a href="profile.html"
+               class="icon-btn"
+               aria-label="Profile">
+
+                <i class="fa-solid fa-circle-user"></i>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= TRACK ORDER ================= -->
+
+    <main class="track-page">
+
+        <!-- PAGE HEADING -->
+
+        <section class="page-heading">
+
+            <div>
+
+                <p class="section-label">
+                    ORDER TRACKING
+                </p>
+
+                <h1>
+                    Track Your Order
+                </h1>
+
+                <p class="subtitle">
+                    Follow the progress of your laundry from pickup to delivery.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ORDER SUMMARY -->
+
+        <section class="order-summary">
+
+            <div>
+
+                <span class="order-label">
+                    ORDER NUMBER
+                </span>
+
+                <h2>
+                    #QRD1348
+                </h2>
+
+            </div>
+
+            <div class="status out-for-delivery">
+
+                <span class="status-dot"></span>
+
+                Out for Delivery
+
+            </div>
+
+        </section>
+
+
+        <!-- TRACKING CONTENT -->
+
+        <section class="tracking-card">
+
+            <!-- TIMELINE -->
+
+            <div class="timeline-section">
+
+                <div class="card-heading">
+
+                    <p class="section-label">
+                        ORDER STATUS
+                    </p>
+
+                    <h2>
+                        Your order is out for delivery.
+                    </h2>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <!-- ORDER PLACED -->
+
+                    <div class="timeline-item completed">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Order Placed
+                            </h3>
+
+                            <p>
+                                Your order has been received.
+                            </p>
+
+                            <span>
+                                17 May, 09:42 AM
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PICKED UP -->
+
+                    <div class="timeline-item completed">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Picked Up
+                            </h3>
+
+                            <p>
+                                Your laundry has been collected.
+                            </p>
+
+                            <span>
+                                18 May, 01:18 PM
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WASHING -->
+
+                    <div class="timeline-item completed">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Washing
+                            </h3>
+
+                            <p>
+                                Your laundry has been cleaned.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- READY -->
+
+                    <div class="timeline-item completed">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Ready
+                            </h3>
+
+                            <p>
+                                Your laundry is ready for delivery.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OUT FOR DELIVERY -->
+
+                    <div class="timeline-item current">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Out for Delivery
+                            </h3>
+
+                            <p>
+                                Your order is on its way to you.
+                            </p>
+
+                            <span>
+                                In progress
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DELIVERED -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <h3>
+                                Delivered
+                            </h3>
+
+                            <p>
+                                Your laundry has been delivered.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAP -->
+
+            <div class="map-section">
+
+                <div class="map-heading">
+
+                    <div>
+
+                        <p class="section-label">
+                            DELIVERY LOCATION
+                        </p>
+
+                        <h2>
+                            On the move
+                        </h2>
+
+                    </div>
+
+                    <span class="live-status">
+
+                        <span></span>
+
+                        Tracking
+
+                    </span>
+
+                </div>
+
+
+                <div class="map-container">
+
+                    <img src="images/track-map.png"
+                         alt="Delivery tracking map"
+                         class="map-image">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DELIVERY DETAILS -->
+
+        <section class="delivery-details">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        DELIVERY DETAILS
+                    </p>
+
+                    <h2>
+                        Delivery Information
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="details-grid">
+
+
+                <!-- DELIVERY DATE -->
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Delivery Date
+                        </span>
+
+                        <strong>
+                            18 May
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DELIVERY TIME -->
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Delivery Time
+                        </span>
+
+                        <strong>
+                            13:00 - 16:00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DELIVERY METHOD -->
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Delivery Method
+                        </span>
+
+                        <strong>
+                            Doorstep Delivery
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
