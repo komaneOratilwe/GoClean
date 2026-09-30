@@ -1,226 +1,431 @@
-<!-- profile.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile - GoClean</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/dashboard.css">
-  <style>
-    /* Profile-specific layout & enhancements matching theme */
-    .profile-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    
-    .profile-card {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      margin-bottom: 30px;
-    }
 
-    .profile-header-banner {
-      background: linear-gradient(135deg, #007bff, #0056b3);
-      height: 120px;
-      position: relative;
-    }
+    <meta charset="UTF-8">
 
-    .profile-avatar-wrapper {
-      position: relative;
-      width: 110px;
-      height: 110px;
-      margin: -55px auto 15px;
-    }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    .profile-avatar {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      border: 4px solid #ffffff;
-      object-fit: cover;
-      background-color: #f0f4f8;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+    <title>Profile | GoClean</title>
 
-    .profile-body {
-      padding: 0 30px 30px;
-      text-align: center;
-    }
+    <link rel="stylesheet"
+          href="css/profile.css">
 
-    .profile-body h2 {
-      margin: 5px 0;
-      color: #333333;
-      font-size: 1.5rem;
-    }
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    .profile-body p.role {
-      color: #6c757d;
-      font-size: 0.95rem;
-      margin-bottom: 25px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      text-align: left;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .form-group label {
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #495057;
-      font-size: 0.9rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      padding: 12px;
-      border: 1px solid #ced4da;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      transition: border-color 0.2s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: #007bff;
-    }
-
-    .form-group input[readonly] {
-      background-color: #e9ecef;
-      cursor: not-allowed;
-    }
-
-    .action-buttons {
-      margin-top: 30px;
-      display: flex;
-      justify-content: flex-end;
-      gap: 15px;
-    }
-
-    .btn-save {
-      background-color: #007bff;
-      color: #ffffff;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .btn-save:hover {
-      background-color: #0056b3;
-    }
-
-    .btn-cancel {
-      background-color: #6c757d;
-      color: #ffffff;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-cancel:hover {
-      background-color: #5a6268;
-    }
-  </style>
 </head>
+
+
 <body>
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="logo">
-      <a href="dashboard.html">
-        <img src="images/logo.png" alt="GoClean Logo">
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="profile.html" class="active">Profile</a></li>
-        <li><a href="login.html" class="logout-btn">Logout</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Main Profile Section -->
-  <main class="profile-container">
-    <div class="profile-card">
-      <div class="profile-header-banner"></div>
-      
-      <div class="profile-body">
-        <div class="profile-avatar-wrapper">
-          <img src="images/washing-machine.3.png" alt="User Avatar" class="profile-avatar" id="avatarPreview">
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+
+        <!-- LOGO -->
+
+        <a href="dashboard.html" class="logo">
+
+            <span>
+                go<span class="logo-accent">clean</span>
+            </span>
+
+            <span class="logo-badge">
+                LAUNDRY
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">
+                Home
+            </a>
+
+            <a href="order.html">
+                New Orders
+            </a>
+
+            <a href="my-orders.html">
+                My Orders
+            </a>
+
+            <a href="track-order.html">
+                Track Order
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="about-us.html">
+                About Us
+            </a>
+
+            <a href="profile.html" class="active">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER ICONS -->
+
+        <div class="header-icons">
+
+            <button
+                class="icon-btn"
+                id="notificationButton"
+                aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notif-dot"></span>
+
+            </button>
+
+
+            <a href="profile.html"
+               class="icon-btn"
+               aria-label="Profile">
+
+                <i class="fa-solid fa-circle-user"></i>
+
+            </a>
+
         </div>
-        
-        <h2 id="displayName">John Doe</h2>
-        <p class="role">Valued Customer</p>
 
-        <form id="profileForm">
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="fullName">Full Name</label>
-              <input type="text" id="fullName" name="fullName" value="John Doe" required>
-            </div>
+    </header>
 
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" value="johndoe@example.com" readonly>
-            </div>
 
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" value="+1 (555) 019-2834" required>
-            </div>
 
-            <div class="form-group">
-              <label for="pickupAddress">Default Pickup Address</label>
-              <input type="text" id="pickupAddress" name="pickupAddress" value="123 Main Street, Apt 4B" required>
-            </div>
+    <!-- ================= NOTIFICATION ================= -->
 
-            <div class="form-group" style="grid-column: 1 / -1;">
-              <label for="instructions">Special Delivery Instructions</label>
-              <textarea id="instructions" name="instructions" rows="3" placeholder="e.g., Leave package at front door, ring bell..."></textarea>
-            </div>
-          </div>
+    <div
+        id="notificationMessage"
+        class="notification-message">
 
-          <div class="action-buttons">
-            <a href="dashboard.html" class="btn-cancel">Cancel</a>
-            <button type="submit" class="btn-save">Save Changes</button>
-          </div>
-        </form>
-      </div>
+        <i class="fa-solid fa-bell"></i>
+
+        <span>
+            You currently have no new notifications.
+        </span>
+
+        <button
+            id="closeNotification"
+            aria-label="Close notification">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
     </div>
-  </main>
 
-  <script>
-    // Handle Profile Update UI interactions
-    document.getElementById('profileForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const updatedName = document.getElementById('fullName').value;
-      document.getElementById('displayName').textContent = updatedName;
-      
-      alert('Profile updated successfully!');
-    });
-  </script>
+
+
+    <!-- ================= PROFILE PAGE ================= -->
+
+    <main class="profile-page">
+
+
+        <!-- PAGE HEADING -->
+
+        <section class="page-heading">
+
+            <p class="section-label">
+                ACCOUNT
+            </p>
+
+            <h1>
+                My Profile
+            </h1>
+
+            <p class="subtitle">
+                Manage your personal information and delivery details.
+            </p>
+
+        </section>
+
+
+
+        <!-- PROFILE CONTENT -->
+
+        <section class="profile-layout">
+
+
+            <!-- ================= PROFILE CARD ================= -->
+
+            <div class="profile-card">
+
+
+                <!-- PROFILE TOP -->
+
+                <div class="profile-top">
+
+                    <div class="avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div class="profile-name">
+
+                        <h2 id="displayName">
+                            GoClean Customer
+                        </h2>
+
+                        <p>
+                            Valued Customer
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE FORM -->
+
+                <form id="profileForm">
+
+
+                    <div class="form-grid">
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="fullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                value="GoClean Customer"
+                                required>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value="customer@goclean.co.za"
+                                readonly>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+27 71 234 5678"
+                                required>
+
+                        </div>
+
+
+                        <!-- ADDRESS -->
+
+                        <div class="form-group">
+
+                            <label for="pickupAddress">
+                                Default Pickup Address
+                            </label>
+
+                            <input
+                                type="text"
+                                id="pickupAddress"
+                                name="pickupAddress"
+                                placeholder="Enter your pickup address"
+                                required>
+
+                        </div>
+
+
+                        <!-- SPECIAL INSTRUCTIONS -->
+
+                        <div class="form-group full-width">
+
+                            <label for="instructions">
+                                Special Delivery Instructions
+                            </label>
+
+                            <textarea
+                                id="instructions"
+                                name="instructions"
+                                rows="4"
+                                placeholder="Example: Please leave the laundry at the front door.">
+                            </textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="action-buttons">
+
+                        <a
+                            href="dashboard.html"
+                            class="btn-secondary">
+
+                            Cancel
+
+                        </a>
+
+
+                        <button
+                            type="submit"
+                            class="btn-primary">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Save Changes
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- ================= ACCOUNT INFORMATION ================= -->
+
+            <aside class="account-card">
+
+                <div class="account-heading">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <div>
+
+                        <h2>
+                            Account Information
+                        </h2>
+
+                        <p>
+                            Manage your GoClean account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong>
+                            customer@goclean.co.za
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-item">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+
+                        <span>
+                            Account Status
+                        </span>
+
+                        <strong class="active-status">
+                            Active
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-item">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    <div>
+
+                        <span>
+                            Member Since
+                        </span>
+
+                        <strong>
+                            2026
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="login.html"
+                    class="logout-link">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/profile.js"></script>
+
+
 </body>
+
 </html>

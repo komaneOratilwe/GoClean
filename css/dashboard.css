@@ -693,3 +693,57 @@ body {
         text-align: left;
     }
 }
+/* ================= NOTIFICATION MESSAGE ================= */
+
+.notification-message {
+    position: fixed;
+    top: 80px;
+    right: 30px;
+    width: 320px;
+    padding: 16px 18px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    display: none;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.notification-message.show {
+    display: flex;
+}
+
+.notification-message strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.notification-message p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+.notification-message button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666666;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .notification-message {
+        top: 70px;
+        right: 15px;
+        left: 15px;
+        width: auto;
+    }
+
+}

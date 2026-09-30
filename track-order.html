@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="css/track-order.css">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -45,9 +44,15 @@
 
         <div class="header-icons">
 
-            <button class="icon-btn" aria-label="Notifications">
+            <button
+                class="icon-btn"
+                id="notificationButton"
+                aria-label="Notifications">
+
                 <i class="fa-regular fa-bell"></i>
+
                 <span class="notif-dot"></span>
+
             </button>
 
             <a href="profile.html"
@@ -61,6 +66,25 @@
         </div>
 
     </header>
+
+
+    <!-- ================= NOTIFICATION ================= -->
+
+    <div id="notificationMessage" class="notification-message">
+
+        <i class="fa-solid fa-bell"></i>
+
+        <span>
+            You currently have no new notifications.
+        </span>
+
+        <button id="closeNotification" aria-label="Close notification">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
 
 
     <!-- ================= TRACK ORDER ================= -->
@@ -90,7 +114,7 @@
         </section>
 
 
-        <!-- ORDER SUMMARY -->
+        <!-- ================= ORDER SUMMARY ================= -->
 
         <section class="order-summary">
 
@@ -100,7 +124,7 @@
                     ORDER NUMBER
                 </span>
 
-                <h2>
+                <h2 id="orderNumber">
                     #QRD1348
                 </h2>
 
@@ -117,7 +141,7 @@
         </section>
 
 
-        <!-- TRACKING CONTENT -->
+        <!-- ================= TRACKING CONTENT ================= -->
 
         <section class="tracking-card">
 
@@ -295,7 +319,7 @@
             </div>
 
 
-            <!-- MAP -->
+            <!-- ================= MAP ================= -->
 
             <div class="map-section">
 
@@ -326,9 +350,10 @@
 
                 <div class="map-container">
 
-                    <img src="images/track-map.png"
-                         alt="Delivery tracking map"
-                         class="map-image">
+                    <img
+                        src="images/track-map.png"
+                        alt="Delivery tracking map"
+                        class="map-image">
 
                 </div>
 
@@ -337,7 +362,7 @@
         </section>
 
 
-        <!-- DELIVERY DETAILS -->
+        <!-- ================= DELIVERY DETAILS ================= -->
 
         <section class="delivery-details">
 
@@ -434,6 +459,11 @@
         </section>
 
     </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/track-order.js"></script>
 
 </body>
 

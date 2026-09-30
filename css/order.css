@@ -1,0 +1,624 @@
+/* =========================================
+   GOCLEAN - NEW ORDER PAGE
+   ========================================= */
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 50px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* Logo */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 115px;
+    height: auto;
+}
+
+.logo-container a {
+    display: flex;
+}
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-left: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+
+    color: #333333;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #5b3f8c;
+}
+
+.navbar a.active {
+    color: #5b3f8c;
+
+    font-weight: 600;
+}
+
+
+/* Header Icons */
+
+.header-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-left: 30px;
+}
+
+.notification-btn {
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    position: relative;
+
+    font-size: 18px;
+
+    color: #333333;
+}
+
+.notification-btn:hover {
+    color: #5b3f8c;
+}
+
+.notification-dot {
+    width: 7px;
+    height: 7px;
+
+    background-color: #e65b5b;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 0;
+    right: -2px;
+}
+
+.profile-icon {
+    color: #333333;
+
+    text-decoration: none;
+
+    font-size: 18px;
+}
+
+.profile-icon:hover {
+    color: #5b3f8c;
+}
+
+
+/* ---------- MAIN PAGE ---------- */
+
+.order-page {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 45px auto 70px;
+}
+
+
+/* Heading */
+
+.page-heading {
+    margin-bottom: 35px;
+}
+
+.page-heading h1 {
+    font-size: 32px;
+
+    color: #333333;
+
+    margin-bottom: 8px;
+}
+
+.page-heading p {
+    font-size: 15px;
+
+    color: #777777;
+}
+
+
+/* ---------- ORDER LAYOUT ---------- */
+
+.order-layout {
+    display: grid;
+
+    grid-template-columns: 1.6fr 0.9fr;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* ---------- FORM SECTION ---------- */
+
+.form-section {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 10px;
+
+    padding: 30px;
+}
+
+.form-section h2 {
+    font-size: 21px;
+
+    margin-bottom: 7px;
+}
+
+.section-description {
+    color: #777777;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+/* Form groups */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #333333;
+}
+
+.form-group label span {
+    color: #999999;
+
+    font-weight: normal;
+}
+
+
+/* Inputs */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #ffffff;
+
+    color: #333333;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #5b3f8c;
+
+    box-shadow: 0 0 0 2px rgba(91, 63, 140, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group small {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 12px;
+
+    color: #888888;
+}
+
+
+/* Two inputs next to each other */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* ---------- ORDER SUMMARY ---------- */
+
+.order-summary {
+    border: 1px solid #e5e5e5;
+
+    border-radius: 10px;
+
+    padding: 28px;
+
+    background-color: #fafafa;
+
+    position: sticky;
+
+    top: 25px;
+}
+
+.order-summary h2 {
+    font-size: 21px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Service */
+
+.summary-service {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 20px;
+}
+
+.summary-service span {
+    font-size: 13px;
+
+    color: #777777;
+}
+
+.summary-service strong {
+    font-size: 16px;
+
+    color: #333333;
+}
+
+
+/* Summary rows */
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+}
+
+.summary-row span:first-child {
+    color: #777777;
+}
+
+
+/* Divider */
+
+.summary-divider {
+    height: 1px;
+
+    background-color: #dddddd;
+
+    margin: 20px 0;
+}
+
+
+/* Total */
+
+.summary-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 16px;
+}
+
+.summary-total strong {
+    color: #5b3f8c;
+
+    font-size: 20px;
+}
+
+
+/* Price note */
+
+.price-note {
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #888888;
+
+    margin: 18px 0 22px;
+}
+
+
+/* ---------- PLACE ORDER BUTTON ---------- */
+
+.place-order-btn {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #5b3f8c;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.place-order-btn:hover {
+    background-color: #48316f;
+}
+
+.place-order-btn i {
+    margin-right: 7px;
+}
+
+
+/* Back link */
+
+.back-link {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #5b3f8c;
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.back-link i {
+    margin-right: 5px;
+}
+
+
+/* ---------- NOTIFICATION MESSAGE ---------- */
+
+.notification-message {
+    position: fixed;
+
+    top: 90px;
+
+    right: 30px;
+
+    width: 320px;
+
+    padding: 15px 16px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+    display: none;
+
+    align-items: center;
+
+    gap: 10px;
+
+    z-index: 1000;
+
+    font-size: 13px;
+}
+
+.notification-message.show {
+    display: flex;
+}
+
+.notification-message > i {
+    color: #5b3f8c;
+}
+
+.notification-message span {
+    flex: 1;
+}
+
+.notification-message button {
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    color: #777777;
+
+    font-size: 15px;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding: 0 25px;
+    }
+
+    .navbar {
+        gap: 16px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary {
+        position: static;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .header {
+        flex-wrap: wrap;
+
+        padding: 15px 20px;
+
+        gap: 15px;
+    }
+
+    .navbar {
+        order: 3;
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        margin-left: 0;
+
+        padding-bottom: 5px;
+    }
+
+    .header-icons {
+        margin-left: auto;
+    }
+
+    .order-page {
+        width: 92%;
+
+        margin-top: 30px;
+    }
+
+    .page-heading h1 {
+        font-size: 26px;
+    }
+
+    .form-section {
+        padding: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        gap: 20px;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+    }
+
+    .header-icons {
+        gap: 14px;
+    }
+
+    .order-summary {
+        padding: 22px;
+    }
+
+    .notification-message {
+        left: 20px;
+
+        right: 20px;
+
+        width: auto;
+    }
+}

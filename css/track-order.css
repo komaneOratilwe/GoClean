@@ -597,3 +597,79 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* =========================================
+   NOTIFICATION MESSAGE
+   ========================================= */
+
+.notification-message {
+    position: fixed;
+
+    top: 85px;
+
+    right: 30px;
+
+    width: 320px;
+
+    padding: 15px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+    display: none;
+
+    align-items: center;
+
+    gap: 10px;
+
+    z-index: 1000;
+
+    font-size: 14px;
+}
+
+.notification-message.show {
+    display: flex;
+}
+
+.notification-message > i {
+    color: #5b3f8c;
+}
+
+.notification-message span {
+    flex: 1;
+}
+
+.notification-message button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #777777;
+
+    font-size: 16px;
+}
+
+.notification-message button:hover {
+    color: #333333;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .notification-message {
+        left: 20px;
+
+        right: 20px;
+
+        width: auto;
+    }
+
+}

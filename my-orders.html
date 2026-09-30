@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders - GoClean</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- My Orders CSS -->
+    <link rel="stylesheet" href="css/my-orders.css">
+</head>
+
+<body>
+
+    <!-- Main My Orders Page -->
+    <main class="orders-page">
+
+        <!-- GoClean Logo -->
+        <div class="logo-container">
+            <a href="dashboard.html">
+                <img src="images/logo.png" alt="GoClean Laundry Logo">
+            </a>
+        </div>
+
+        <!-- Page Heading -->
+        <section class="orders-content">
+
+            <h1>My Orders</h1>
+
+            <p class="page-description">
+                View and manage orders.
+            </p>
+
+            <!-- Orders Table -->
+            <div class="orders-table-container">
+
+                <table class="orders-table">
+
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Service</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <!-- Order 1 -->
+                        <tr>
+                            <td>#QRD1348</td>
+
+                            <td>Wash &amp; Fold</td>
+
+                            <td>
+                                <span class="status in-progress">
+                                    In Progress
+                                </span>
+                            </td>
+
+                            <td>19 May, 10:00 AM</td>
+
+                            <td>R410.34</td>
+
+                            <td>
+                                <a href="track-order.html?id=QRD1348" class="view-details">
+                                    Track Order
+                                </a>
+                            </td>
+                        </tr>
+
+                        <!-- Order 2 -->
+                        <tr>
+                            <td>#QRD1379</td>
+
+                            <td>Dry Clean</td>
+
+                            <td>
+                                <span class="status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>22 May, 16:00 PM</td>
+
+                            <td>R199.71</td>
+
+                            <td>
+                                <a href="track-order.html?id=QRD1379" class="view-details">
+                                    Track Order
+                                </a>
+                            </td>
+                        </tr>
+
+                        <!-- Order 3 -->
+                        <tr>
+                            <td>#QRD1211</td>
+
+                            <td>Wash &amp; Fold</td>
+
+                            <td>
+                                <span class="status cancelled">
+                                    Cancelled
+                                </span>
+                            </td>
+
+                            <td>02 May, 13:00 PM</td>
+
+                            <td>R281.06</td>
+
+                            <td>
+                                <a href="track-order.html?id=QRD1211" class="view-details">
+                                    Track Order
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+             <script src="js/my-orders.js"></script>
+</body>
+</html>

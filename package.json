@@ -1,0 +1,26 @@
+{
+  "name": "goclean",
+  "version": "1.0.0",
+  "description": "Laundry Pickup and Delivery Service Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/komaneOratilwe/GoClean.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/komaneOratilwe/GoClean/issues"
+  },
+  "homepage": "https://github.com/komaneOratilwe/GoClean#readme",
+       
+     "dependencies": {
+     "@supabase/supabase-js": "^2.45.0",
+     "bcryptjs": "^2.4.3"
+   }
+}

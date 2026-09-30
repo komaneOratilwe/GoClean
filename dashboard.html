@@ -29,32 +29,58 @@
             <span class="logo-badge">LAUNDRY</span>
         </a>
 
+
         <nav class="main-nav">
 
-            <a href="dashboard.html" class="active">Home</a>
+            <a href="dashboard.html" class="active">
+                Home
+            </a>
 
-            <a href="order.html">New Orders</a>
+            <a href="order.html">
+                New Orders
+            </a>
 
-            <a href="my-orders.html">My Orders</a>
+            <a href="my-orders.html">
+                My Orders
+            </a>
 
-            <a href="track-order.html">Track Order</a>
+            <a href="track-order.html?id=QRD1348">
+                Track Order
+            </a>
 
-            <a href="services.html">Services</a>
+            <a href="services.html">
+                Services
+            </a>
 
-            <a href="about-us.html">About Us</a>
+            <a href="about-us.html">
+                About Us
+            </a>
 
-            <a href="profile.html">Profile</a>
+            <a href="profile.html">
+                Profile
+            </a>
 
         </nav>
 
+
         <div class="header-icons">
 
-            <button class="icon-btn" aria-label="Notifications">
+            <!-- Notification Button -->
+            <button
+                class="icon-btn"
+                id="notificationButton"
+                aria-label="Notifications">
+
                 <i class="fa-regular fa-bell"></i>
+
                 <span class="notif-dot"></span>
+
             </button>
 
-            <a href="profile.html"
+
+            <!-- Profile Button -->
+            <a
+                href="profile.html"
                 class="icon-btn"
                 aria-label="Profile">
 
@@ -67,18 +93,43 @@
     </header>
 
 
+    <!-- Notification Message -->
+
+    <div
+        class="notification-message"
+        id="notificationMessage">
+
+        <div>
+            <strong>Notifications</strong>
+            <p>You have an update for order #QRD1348.</p>
+        </div>
+
+        <button
+            id="closeNotification"
+            aria-label="Close notification">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
     <!-- ================= DASHBOARD ================= -->
 
     <main class="dashboard">
 
-        <!-- WELCOME -->
+
+        <!-- ================= WELCOME ================= -->
 
         <section class="welcome-section">
 
             <div>
 
                 <h1>
-                    Welcome back, Chris! <span>👋</span>
+                    Welcome back, Chris!
+                    <span>👋</span>
                 </h1>
 
                 <p class="welcome-text">
@@ -90,7 +141,8 @@
         </section>
 
 
-        <!-- CURRENT ORDER -->
+
+        <!-- ================= CURRENT ORDER ================= -->
 
         <section class="current-order-section">
 
@@ -108,22 +160,32 @@
 
                 </div>
 
-                <a href="track-order.html" class="view-link">
+
+                <a
+                    href="track-order.html?id=QRD1348"
+                    class="view-link">
+
                     Track Order
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
 
 
+
             <div class="current-order-card">
+
 
                 <div class="order-image">
 
-                    <img src="images/Laundry.png"
+                    <img
+                        src="images/Laundry.png"
                         alt="Laundry">
 
                 </div>
+
 
 
                 <div class="order-details">
@@ -142,6 +204,7 @@
 
                         </div>
 
+
                         <span class="status picked-up">
                             Picked Up
                         </span>
@@ -149,7 +212,9 @@
                     </div>
 
 
+
                     <div class="order-info">
+
 
                         <div class="info-item">
 
@@ -168,6 +233,7 @@
                             </div>
 
                         </div>
+
 
 
                         <div class="info-item">
@@ -191,7 +257,10 @@
                     </div>
 
 
-                    <a href="track-order.html" class="primary-btn">
+
+                    <a
+                        href="track-order.html?id=QRD1348"
+                        class="primary-btn">
 
                         Track My Order
 
@@ -206,9 +275,11 @@
         </section>
 
 
-        <!-- QUICK ACTIONS -->
+
+        <!-- ================= QUICK ACTIONS ================= -->
 
         <section class="quick-section">
+
 
             <div class="section-heading simple-heading">
 
@@ -227,13 +298,22 @@
             </div>
 
 
+
             <div class="quick-actions">
 
-                <a href="order.html" class="quick-card">
+
+                <!-- New Order -->
+
+                <a
+                    href="order.html"
+                    class="quick-card">
 
                     <div class="quick-icon">
+
                         <i class="fa-solid fa-plus"></i>
+
                     </div>
+
 
                     <div>
 
@@ -247,16 +327,25 @@
 
                     </div>
 
+
                     <i class="fa-solid fa-arrow-right arrow"></i>
 
                 </a>
 
 
-                <a href="my-orders.html" class="quick-card">
+
+                <!-- My Orders -->
+
+                <a
+                    href="my-orders.html"
+                    class="quick-card">
 
                     <div class="quick-icon">
+
                         <i class="fa-solid fa-list-check"></i>
+
                     </div>
+
 
                     <div>
 
@@ -270,16 +359,25 @@
 
                     </div>
 
+
                     <i class="fa-solid fa-arrow-right arrow"></i>
 
                 </a>
 
 
-                <a href="track-order.html" class="quick-card">
+
+                <!-- Track Order -->
+
+                <a
+                    href="track-order.html?id=QRD1348"
+                    class="quick-card">
 
                     <div class="quick-icon">
+
                         <i class="fa-solid fa-location-dot"></i>
+
                     </div>
+
 
                     <div>
 
@@ -293,6 +391,7 @@
 
                     </div>
 
+
                     <i class="fa-solid fa-arrow-right arrow"></i>
 
                 </a>
@@ -302,9 +401,11 @@
         </section>
 
 
-        <!-- RECENT ORDERS -->
+
+        <!-- ================= RECENT ORDERS ================= -->
 
         <section class="recent-section">
+
 
             <div class="section-heading">
 
@@ -320,7 +421,10 @@
 
                 </div>
 
-                <a href="my-orders.html" class="view-link">
+
+                <a
+                    href="my-orders.html"
+                    class="view-link">
 
                     View All
 
@@ -331,18 +435,23 @@
             </div>
 
 
+
             <div class="orders-list">
 
 
-                <!-- ORDER 1 -->
+                <!-- ================= ORDER 1 ================= -->
 
                 <div class="recent-order">
+
 
                     <div class="recent-main">
 
                         <div class="order-icon">
+
                             <i class="fa-solid fa-shirt"></i>
+
                         </div>
+
 
                         <div>
 
@@ -367,17 +476,21 @@
                     </div>
 
 
+
                     <div class="recent-right">
+
 
                         <div class="recent-status in-progress">
                             In Progress
                         </div>
 
+
                         <strong>
                             R410.34
                         </strong>
 
-                        <a href="track-order.html">
+
+                        <a href="track-order.html?id=QRD1348">
                             Track Order
                         </a>
 
@@ -386,15 +499,20 @@
                 </div>
 
 
-                <!-- ORDER 2 -->
+
+                <!-- ================= ORDER 2 ================= -->
 
                 <div class="recent-order">
+
 
                     <div class="recent-main">
 
                         <div class="order-icon">
+
                             <i class="fa-solid fa-spray-can-sparkles"></i>
+
                         </div>
+
 
                         <div>
 
@@ -419,17 +537,21 @@
                     </div>
 
 
+
                     <div class="recent-right">
+
 
                         <div class="recent-status completed">
                             Completed
                         </div>
 
+
                         <strong>
                             R199.71
                         </strong>
 
-                        <a href="track-order.html">
+
+                        <a href="track-order.html?id=QRD1379">
                             Track Order
                         </a>
 
@@ -442,6 +564,10 @@
         </section>
 
     </main>
+
+
+    <!-- Dashboard JavaScript -->
+    <script src="js/dashboard.js"></script>
 
 </body>
 

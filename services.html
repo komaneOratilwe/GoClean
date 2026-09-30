@@ -23,38 +23,73 @@
     <header class="site-header">
 
         <a href="dashboard.html" class="logo">
-            <span>go<span class="logo-accent">clean</span></span>
-            <span class="logo-badge">LAUNDRY</span>
+
+            <span>
+                go<span class="logo-accent">clean</span>
+            </span>
+
+            <span class="logo-badge">
+                LAUNDRY
+            </span>
+
         </a>
+
 
         <nav class="main-nav">
 
-            <a href="dashboard.html">Home</a>
+            <a href="dashboard.html">
+                Home
+            </a>
 
-            <a href="order.html">New Orders</a>
+            <a href="order.html">
+                New Orders
+            </a>
 
-            <a href="my-orders.html">My Orders</a>
+            <a href="my-orders.html">
+                My Orders
+            </a>
 
-            <a href="track-order.html">Track Order</a>
+            <a href="track-order.html?id=QRD1348">
+                Track Order
+            </a>
 
-            <a href="services.html" class="active">Services</a>
+            <a href="services.html" class="active">
+                Services
+            </a>
 
-            <a href="about-us.html">About Us</a>
+            <a href="about-us.html">
+                About Us
+            </a>
 
-            <a href="profile.html">Profile</a>
+            <a href="profile.html">
+                Profile
+            </a>
 
         </nav>
 
+
         <div class="header-icons">
 
-            <button class="icon-btn" aria-label="Notifications">
+            <!-- Notification Button -->
+
+            <button
+                class="icon-btn"
+                id="notificationButton"
+                aria-label="Notifications">
+
                 <i class="fa-regular fa-bell"></i>
+
                 <span class="notif-dot"></span>
+
             </button>
 
-            <a href="profile.html"
-               class="icon-btn"
-               aria-label="Profile">
+
+            <!-- Profile -->
+
+            <a
+                href="profile.html"
+                class="icon-btn"
+                aria-label="Profile">
 
                 <i class="fa-solid fa-circle-user"></i>
 
@@ -65,11 +100,45 @@
     </header>
 
 
+
+    <!-- ================= NOTIFICATION ================= -->
+
+    <div
+        class="notification-message"
+        id="notificationMessage">
+
+        <div>
+
+            <strong>
+                Notifications
+            </strong>
+
+            <p>
+                You have an update for order #QRD1348.
+            </p>
+
+        </div>
+
+
+        <button
+            id="closeNotification"
+            aria-label="Close notification">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
     <!-- ================= SERVICES ================= -->
 
     <main class="services-page">
 
-        <h1>Our Services</h1>
+        <h1>
+            Our Services
+        </h1>
 
         <p class="subtitle">
             Professional laundry services designed to make your life easier.
@@ -79,15 +148,19 @@
         <div class="services-grid">
 
 
-            <!-- WASH & FOLD -->
+            <!-- ================= WASH & FOLD ================= -->
 
-            <div class="service-card">
+            <a
+                href="order.html?service=wash-fold"
+                class="service-card">
 
                 <div class="icon">
                     <i class="fa-solid fa-shirt"></i>
                 </div>
 
-                <h2>Wash & Fold</h2>
+                <h2>
+                    Wash & Fold
+                </h2>
 
                 <p class="desc">
                     Professional washing, drying and folding for your everyday clothes.
@@ -97,18 +170,23 @@
                     From R35/kg
                 </p>
 
-            </div>
+            </a>
 
 
-            <!-- DRY CLEANING -->
 
-            <div class="service-card">
+            <!-- ================= DRY CLEANING ================= -->
+
+            <a
+                href="order.html?service=dry-cleaning"
+                class="service-card">
 
                 <div class="icon">
                     <i class="fa-solid fa-spray-can-sparkles"></i>
                 </div>
 
-                <h2>Dry Cleaning</h2>
+                <h2>
+                    Dry Cleaning
+                </h2>
 
                 <p class="desc">
                     Careful cleaning for suits, dresses and delicate garments.
@@ -118,18 +196,23 @@
                     From R50/item
                 </p>
 
-            </div>
+            </a>
 
 
-            <!-- IRONING -->
 
-            <div class="service-card">
+            <!-- ================= IRONING ================= -->
+
+            <a
+                href="order.html?service=ironing"
+                class="service-card">
 
                 <div class="icon">
                     <i class="fa-solid fa-temperature-low"></i>
                 </div>
 
-                <h2>Ironing</h2>
+                <h2>
+                    Ironing
+                </h2>
 
                 <p class="desc">
                     Professionally pressed clothes ready to wear.
@@ -139,18 +222,23 @@
                     From R25/kg
                 </p>
 
-            </div>
+            </a>
 
 
-            <!-- BEDDING -->
 
-            <div class="service-card">
+            <!-- ================= BEDDING ================= -->
+
+            <a
+                href="order.html?service=bedding"
+                class="service-card">
 
                 <div class="icon">
                     <i class="fa-solid fa-bed"></i>
                 </div>
 
-                <h2>Bedding</h2>
+                <h2>
+                    Bedding
+                </h2>
 
                 <p class="desc">
                     Deep cleaning for blankets, duvets, sheets and other bedding.
@@ -160,18 +248,23 @@
                     From R80/item
                 </p>
 
-            </div>
+            </a>
 
 
-            <!-- PICKUP & DELIVERY -->
 
-            <div class="service-card">
+            <!-- ================= PICKUP & DELIVERY ================= -->
+
+            <a
+                href="order.html?service=pickup-delivery"
+                class="service-card">
 
                 <div class="icon">
                     <i class="fa-solid fa-truck"></i>
                 </div>
 
-                <h2>Pickup & Delivery</h2>
+                <h2>
+                    Pickup & Delivery
+                </h2>
 
                 <p class="desc">
                     Convenient collection and delivery straight to your door.
@@ -181,18 +274,23 @@
                     From R30
                 </p>
 
-            </div>
+            </a>
 
 
-            <!-- SPECIAL CARE -->
 
-            <div class="service-card">
+            <!-- ================= SPECIAL CARE ================= -->
+
+            <a
+                href="order.html?service=special-care"
+                class="service-card">
 
                 <div class="icon">
                     <i class="fa-solid fa-hand-sparkles"></i>
                 </div>
 
-                <h2>Special Care</h2>
+                <h2>
+                    Special Care
+                </h2>
 
                 <p class="desc">
                     Extra care for delicate garments and items that need special attention.
@@ -202,7 +300,7 @@
                     From R60/item
                 </p>
 
-            </div>
+            </a>
 
         </div>
 
@@ -210,5 +308,10 @@
 
 </div>
 
+
+<!-- Services JavaScript -->
+<script src="js/services.js"></script>
+
 </body>
+
 </html>

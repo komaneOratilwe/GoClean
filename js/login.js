@@ -1,70 +1,110 @@
-// ===============================
-// GoClean Login JavaScript
-// ===============================
+/* =========================================
+   GOCLEAN - LOGIN PAGE
+   ========================================= */
 
-// Show / Hide Password
 
-const togglePassword = document.getElementById("togglePassword");
-const password = document.getElementById("password");
+/* ================= LOGIN FORM ================= */
 
-togglePassword.addEventListener("click", function () {
+const loginForm =
+    document.getElementById("loginForm");
 
-    if (password.type === "password") {
 
-        password.type = "text";
+loginForm.addEventListener("submit", async function(event) {
 
-        togglePassword.classList.remove("fa-eye");
-        togglePassword.classList.add("fa-eye-slash");
+    event.preventDefault();
 
-    } else {
 
-        password.type = "password";
+    const email =
+        document.getElementById("email").value.trim();
 
-        togglePassword.classList.remove("fa-eye-slash");
-        togglePassword.classList.add("fa-eye");
+    const password =
+        document.getElementById("password").value;
+
+
+    /* Check that both fields contain information */
+
+    if (email === "" || password === "") {
+
+        alert("Please enter your email address and password.");
+
+        return;
+
+    }
+
+
+    /*
+        REAL LOGIN
+
+        Sends the email and password to our Vercel
+        serverless function, which checks Supabase.
+    */
+
+    try {
+
+        const response = await fetch("/api/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            alert(result.error || "Login failed. Please try again.");
+            return;
+        }
+
+        /*
+            Save the logged-in user so other pages
+            (like placing an order) know who's logged in.
+        */
+
+        localStorage.setItem("goclean_user", JSON.stringify(result.user));
+
+        alert("Login successful!");
+
+        window.location.href = "dashboard.html";
+
+    } catch (error) {
+
+        console.error("Login error:", error);
+        alert("Something went wrong. Please check your connection and try again.");
 
     }
 
 });
 
 
-// Login Validation
 
-const loginForm = document.getElementById("loginForm");
+/* ================= SHOW / HIDE PASSWORD ================= */
 
-loginForm.addEventListener("submit", function (event) {
+const togglePassword =
+    document.getElementById("togglePassword");
 
-    event.preventDefault();
+const passwordInput =
+    document.getElementById("password");
 
-    const email = document.getElementById("email").value.trim();
-    const passwordValue = password.value.trim();
 
-    if (email === "" || passwordValue === "") {
+togglePassword.addEventListener("click", function() {
 
-        alert("Please fill in all fields.");
-        return;
+    if (passwordInput.type === "password") {
 
-    }
+        passwordInput.type = "text";
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        togglePassword.classList.remove("fa-eye");
 
-    if (!emailPattern.test(email)) {
+        togglePassword.classList.add("fa-eye-slash");
 
-        alert("Please enter a valid email address.");
-        return;
+    } else {
 
-    }
+        passwordInput.type = "password";
 
-    if (passwordValue.length < 6) {
+        togglePassword.classList.remove("fa-eye-slash");
 
-        alert("Password must be at least 6 characters long.");
-        return;
+        togglePassword.classList.add("fa-eye");
 
     }
-
-    alert("Login successful!");
-
-    // Redirect to dashboard
-    window.location.href = "dashboard.html";
 
 });
