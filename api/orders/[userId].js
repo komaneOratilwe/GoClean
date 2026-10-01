@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     const { data, error } = await supabase
         .from("orders")
         .select(
-            "order_number, service, status, order_date, pickup_date, pickup_time, total"
+            "order_number, service, status, order_date, pickup_date, pickup_time, total, picked_up_at, washing_at, ready_at, out_for_delivery_at, delivered_at"
         )
         .eq("user_id", userId)
         .order("order_date", { ascending: false });

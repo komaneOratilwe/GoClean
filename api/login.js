@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
 
     const { data: user, error } = await supabase
         .from("users")
-        .select("id, full_name, email, password_hash, failed_login_attempts, locked_until, is_verified")
+        .select("id, full_name, email, password_hash, failed_login_attempts, locked_until, is_admin")
         .eq("email", email)
         .maybeSingle();
 
@@ -119,7 +119,8 @@ module.exports = async (req, res) => {
         user: {
             id: user.id,
             fullName: user.full_name,
-            email: user.email
+            email: user.email,
+            isAdmin: user.is_admin || false
         }
     });
 };
