@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify Email - GoClean</title>
+    <link rel="stylesheet" href="css/forgot-password.css">
+</head>
+<body>
+
+<div class="auth-card">
+    <div class="image-container">
+        <img src="images/password.png" alt="Verify illustration">
+    </div>
+
+    <h2 id="status-heading">Verifying your email...</h2>
+    <p id="status-message">Please wait a moment.</p>
+
+    <div class="login-redirect">
+        <a href="login.html">Back to Login</a>
+    </div>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
+
+    const heading = document.getElementById("status-heading");
+    const message = document.getElementById("status-message");
+
+    if (!token) {
+        heading.textContent = "Invalid link";
+        message.textContent = "No verification token was found in this link.";
+    } else {
+        fetch(`/api/verify-email?token=${token}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.error) {
+                    heading.textContent = "Verification failed";
+                    message.textContent = data.error;
+                } else {
+                    heading.textContent = "Email verified!";
+                    message.textContent = data.message;
+                }
+            })
+            .catch(() => {
+                heading.textContent = "Something went wrong";
+                message.textContent = "Please try again later.";
+            });
+    }
+</script>
+
+</body>
+</html>

@@ -108,7 +108,7 @@ signupForm.addEventListener("submit", async function (event) {
             return;
         }
 
-        alert("Account created successfully!");
+        alert("Email sent! Please verify account.");
 
         // Send the user to the login page
         window.location.href = "login.html";

@@ -1,6 +1,7 @@
 const applyCors = require("./_cors");
 const supabase = require("./_supabase");
 const crypto = require("crypto");
+const nodemailer = require("nodemailer");
 
 module.exports = async (req, res) => {
     if (applyCors(req, res)) return;
@@ -54,33 +55,29 @@ module.exports = async (req, res) => {
 
     const resetLink = `${process.env.SITE_URL}/reset-password.html?token=${token}`;
 
-    // ============= SEND THE REAL EMAIL =============
+    // ============= SEND THE EMAIL (via Gmail) =============
 
     try {
 
-        const emailResponse = await fetch("https://api.resend.com/emails", {
-            method: "POST",
-            headers: {
-                "Authorization": `Bearer ${process.env.RESEND_API_KEY}`,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                from: "GoClean <onboarding@resend.dev>",
-                to: [email],
-                subject: "Reset your GoClean password",
-                html: `
-                    <p>Hi ${user.full_name || "there"},</p>
-                    <p>We received a request to reset your GoClean password. This link expires in 24 hours.</p>
-                    <p><a href="${resetLink}">Click here to reset your password</a></p>
-                    <p>If you didn't request this, you can safely ignore this email.</p>
-                `
-            })
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: process.env.GMAIL_USER,
+                pass: process.env.GMAIL_APP_PASSWORD
+            }
         });
 
-        if (!emailResponse.ok) {
-            const errorBody = await emailResponse.text();
-            console.error("Resend error:", errorBody);
-        }
+        await transporter.sendMail({
+            from: `GoClean <${process.env.GMAIL_USER}>`,
+            to: email,
+            subject: "Reset your GoClean password",
+            html: `
+                <p>Hi ${user.full_name || "there"},</p>
+                <p>We received a request to reset your GoClean password. This link expires in 24 hours.</p>
+                <p><a href="${resetLink}">Click here to reset your password</a></p>
+                <p>If you didn't request this, you can safely ignore this email.</p>
+            `
+        });
 
     } catch (emailError) {
 

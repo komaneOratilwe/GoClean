@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
 
     const { data: user, error } = await supabase
         .from("users")
-        .select("id, full_name, email, password_hash, failed_login_attempts, locked_until")
+        .select("id, full_name, email, password_hash, failed_login_attempts, locked_until, is_verified")
         .eq("email", email)
         .maybeSingle();
 
@@ -92,6 +92,14 @@ module.exports = async (req, res) => {
 
     }
 
+    // ============= CHECK EMAIL IS VERIFIED =============
+
+    if (!user.is_verified) {
+        return res.status(403).json({
+            error: "Please verify your email before logging in. Check your inbox for the verification link."
+        });
+    }
+
     // ============= SUCCESSFUL LOGIN - RESET COUNTER =============
 
     if (user.failed_login_attempts > 0 || user.locked_until) {
@@ -107,7 +115,7 @@ module.exports = async (req, res) => {
     }
 
     res.status(200).json({
-        message: "Login successful.",
+        message: "Login successful!.",
         user: {
             id: user.id,
             fullName: user.full_name,

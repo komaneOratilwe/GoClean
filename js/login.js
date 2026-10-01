@@ -53,6 +53,8 @@ loginForm.addEventListener("submit", async function(event) {
 
         if (!response.ok) {
             alert(result.error || "Login failed. Please try again.");
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
             return;
         }
 
